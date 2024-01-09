@@ -1,0 +1,50 @@
+\defaultfontfeatures[Arno Pro]{
+% Font Features
+    Contextuals = Alternate,
+    Numbers = { Proportional, Uppercase },
+    Ligatures = { Common, TeX },
+    Kerning = On,
+% Font Specification
+    Path = ArnoPro/,
+    Extension = .otf,
+    UprightFont    = *-Regular,
+    BoldFont       = *-Smbd,
+    ItalicFont     = *-Italic,
+    BoldItalicFont = *-SmbdItalic,
+    UprightFeatures = {
+        SizeFeatures = {
+            { Size =     -08.5, Font = *-Caption },
+            { Size = 08.5-10.9, Font = *-SmText  },
+            { Size = 10.9-14.0, Font = *-Regular },
+            { Size = 14.0-21.5, Font = *-Subhead },
+            { Size = 21.5-    , Font = *-Display }
+        }
+    }, 
+    BoldFeatures = {
+        SizeFeatures = {
+            { Size =     -08.5, Font = *-SmbdCaption },
+            { Size = 08.5-10.9, Font = *-SmbdSmText  },
+            { Size = 10.9-14.0, Font = *-Smbd        },
+            { Size = 14.0-21.5, Font = *-SmbdSubhead },
+            { Size = 21.5-    , Font = *-SmbdDisplay }
+        }
+    },
+    BoldItalicFeatures = {
+        SizeFeatures = {
+            { Size =     -08.5, Font = *-ItalicCaption },
+            { Size = 08.5-10.9, Font = *-ItalicSmText  },
+            { Size = 10.9-14.0, Font = *-Italic        },
+            { Size = 14.0-21.5, Font = *-ItalicSubhead },
+            { Size = 21.5-    , Font = *-ItalicDisplay }
+        }
+    },
+    BoldItalicFeatures = {
+        SizeFeatures = {
+            { Size =     -08.5, Font = *-SmbdItalicCaption },
+            { Size = 08.5-10.9, Font = *-SmbdItalicSmText  },
+            { Size = 10.9-14.0, Font = *-SmbdItalic        },
+            { Size = 14.0-21.5, Font = *-SmbdItalicSubhead },
+            { Size = 21.5-    , Font = *-SmbdItalicDisplay }
+        }
+    },
+}

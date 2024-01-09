@@ -1,0 +1,150 @@
+\documentclass{scrartcl}
+
+\usepackage{ArnoPro}
+\usepackage[USenglish]{babel}
+\usepackage[ignoredisplayed]{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\KOMAoptions{
+    paper = letter,
+    fontsize = 11bp,
+    DIV = 19,
+    parskip = never,
+}
+\pagestyle{empty}
+\setlength\parindent{0bp}
+
+\renewcommand\normalsize{\fontsize{11bp}{15bp}}
+
+\setkomafont{disposition}{\normalfont}
+\setkomafont{title}{\fontsize{16bp}{16bp}\addfontfeatures{
+    Kerning = Uppercase,
+    Letters = Uppercase,
+    Numbers = Uppercase,
+    LetterSpace = 5
+}}
+\setkomafont{section}{\addfontfeatures{
+    Letters = { SmallCaps, UppercaseSmallCaps },
+    LetterSpace = 5
+}}
+\RedeclareSectionCommand[
+    afterindent = false,
+    runin       = false,
+    afterskip   = 1bp,
+    beforeskip  = 1bp
+]{section}
+\renewcommand\sectionlinesformat[4]{
+    \rule{\linewidth}{0.5bp}\\
+    \raisebox{3bp}{#4}%
+}
+
+\newlist{resumelist}{itemize}{3}
+\setlist[resumelist]{
+label=,
+leftmargin=0bp,
+topsep=0bp,partopsep=0bp,
+parsep=0bp,itemsep=7bp
+}
+\setlist[itemize]{
+leftmargin=28bp,rightmargin=28bp,
+topsep=0bp,partopsep=0bp,
+parsep=0bp,itemsep=0bp
+}
+
+\newcommand\kat{\kern0.5bp@\kern0.5bp}
+\newcommand\kdt{\kern0.5bp.\kern0.5bp}
+\newcommand\lrlr[4]{
+{#1}\hfill
+\makebox[1.2in][l]{#2}\\
+{\textit{#3}}\hfill
+\makebox[1.2in][l]{#4}}
+\newcommand\ipunct{\enspace·\enspace}
+
+% ·
+\begin{document}
+
+{\usekomafont{title}
+    BOWEN\hspace{5bp}JIANG\par
+}
+
+\vspace{3bp}
+
+{\fontsize{10bp}{11.5bp}\selectfont
+    \href{mailto:jiangbowen@cmu.edu}{jiangbowen\kat cmu\kdt edu}\ipunct \href{tel:+14123782501}{412-378-2501}\\
+    \href{https://linkedin.com/in/bowen4/}{linkedin\kdt com/in/bowen4}\ipunct 
+    \href{https://github.com/bowen4/}{github\kdt com/bowen4}\par
+}
+
+\section{Education}
+    \begin{resumelist}
+    \item\lrlr
+    {\textbf{Carnegie Mellon University}\ipunct School of Computer Science}
+    {Pittsburgh, {\Fcpsp PA}}
+    {\itshape Bachelor of Science in Computer Science}
+    {Expected May 2027}
+    \begin{itemize}
+        \item GPA: 4.0/4.0
+        \item Coursework: Imperative and Functional Programming, Theoretical Computer Science, 
+        \item[] Honors Linear Algebra and Vector Analysis, Discrete Mathematics
+    \end{itemize}
+
+    \item\lrlr
+    {\bfseries Raffles Institution}
+    {Singapore}
+    {\itshape Singapore--Cambridge A-Levels}
+    {Dec 2020}
+    \begin{itemize}
+        \item A-Levels: 90/90,\enspace SAT: 1600/1600
+        \item Singapore National Olympiad in Informatics\ipunct Gold
+        \item IMDA SG Digital Scholar
+    \end{itemize}
+\end{resumelist}
+\section{Experience}
+\begin{resumelist}
+\item\lrlr%
+{\bfseries Government of Singapore Investment Corporation}
+{Singapore}
+{\textit{Quantitative Analyst Intern}}
+{Jan 2023 -- Jun 2023}
+\begin{itemize}
+    \item Developed computational and mathematical techniques for extracting signals, treating option volatilities, and portfolio optimization
+    \item Built new R and Python software packages with accompanying documentation for use by team members according to management requirements
+    \item Accelerated routines using C++, vectorization and parallelization techniques
+    \item Produced long-form white paper and presented it to senior team members
+    \item Technologies used: R, Python, C++
+\end{itemize}
+
+\item\lrlr
+{\bfseries Republic of Singapore Navy}
+{Singapore}
+{Section Commander}
+{Jan 2021 -- Nov 2022}
+\end{resumelist}
+
+\section{Projects}
+\begin{resumelist}
+\item \textbf{Lambdawarden}\\
+\href{https://github.com/bowen4/lambdawarden/}{\textit{github.com/bowen4/lambdawarden}}
+\begin{itemize}
+        \item Haskell implementation of Bitwarden password management server, compatible with upstream clients
+        \item Focus on clean architecture with dependency inversion and separation of layers
+        \item Technologies: Haskell,\:REST,\:SQL
+    \end{itemize}
+\item \textbf{Arbitrary Card Game}\\
+\href{https://github.com/bowen2/acg/}{\textit{github.com/bowen2/acg}}
+    \begin{itemize}
+        \item Networked tabletop card game simulator
+        \item Clients access a website and play cards on a virtual tabletop
+        \item Technologies: Javascript, Node.js, HTML5, WebSockets
+    \end{itemize}
+\item \textbf{LetsBeRational}\\
+\href{https://github.com/bowen4/letsberational/}{\textit{github.com/bowen4/letsberational}}
+    \begin{itemize}
+        \item R bindings for C++ library for efficiently computing option-implied volatilities
+    \end{itemize}
+\end{resumelist}
+
+\section{Miscellaneous}
+\makebox[1in][l]{\emph{Languages:}} C, C++, Java, Javascript, Haskell, Rust, Python\\
+\makebox[1in][l]{\emph{Interests:}} Running, Poker, Fencing
+\end{document}
